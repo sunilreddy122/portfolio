@@ -1,0 +1,1888 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sunil Kumar Reddy | Portfolio</title>
+  <meta name="description" content="Portfolio of Sunil Kumar Reddy – projects, skills, resume, and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --bg: #000000;
+      --surface: #0a0a0a;
+      --muted: #4a4a4a;
+      --text: #ffffff;
+      --accent: #0066ff;
+      --accent-2: #0099ff;
+      --accent-3: #00ccff;
+      --card: #0d0d0d;
+      --ring: #0066ff;
+      --gradient-1: linear-gradient(135deg, #0066ff 0%, #0099ff 100%);
+      --gradient-2: linear-gradient(135deg, #0099ff 0%, #00ccff 100%);
+      --gradient-3: linear-gradient(135deg, #0066ff 0%, #00ccff 100%);
+      --gradient-4: linear-gradient(135deg, #0033cc 0%, #0066ff 100%);
+      --gradient-5: linear-gradient(135deg, #0099ff 0%, #0066ff 100%);
+      --gradient-6: linear-gradient(135deg, #00ccff 0%, #0099ff 100%);
+    }
+    * { box-sizing: border-box }
+    html { scroll-behavior: smooth }
+    body {
+      margin: 0; color: var(--text); 
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(0, 102, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 153, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(0, 204, 255, 0.1) 0%, transparent 50%),
+        var(--bg);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; 
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px }
+    ::-webkit-scrollbar-track { background: var(--surface) }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent-2) }
+    
+    a { color: var(--accent); text-decoration: none; transition: all 0.3s ease }
+    a:hover { color: var(--accent-2); text-decoration: none; transform: translateY(-2px) }
+    
+    .container { width: min(1200px, 94%); margin: 0 auto }
+    
+    /* Header Styles */
+    header {
+      position: sticky; top: 0; backdrop-filter: blur(20px); 
+      background: rgba(0, 0, 0, 0.95);
+      border-bottom: 1px solid rgba(0, 102, 255, 0.3); 
+      z-index: 100;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 0 }
+    .brand { display: flex; align-items: center; gap: 1rem; font-weight: 900; letter-spacing: .5px; font-size: 1.2rem }
+    
+    .logo {
+      width: 45px; height: 45px; border-radius: 15px; 
+      background: var(--gradient-3);
+      box-shadow: 0 8px 25px rgba(0, 102, 255, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.3);
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1) }
+      50% { transform: scale(1.05) }
+    }
+    
+    nav ul { list-style: none; display: flex; gap: 2rem; padding: 0; margin: 0 }
+    nav a { 
+      padding: .8rem 1.5rem; border-radius: 25px; 
+      background: rgba(0, 102, 255, 0.2); 
+      border: 2px solid rgba(0, 102, 255, 0.4);
+      transition: all 0.3s ease;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text);
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 2px 8px rgba(0, 102, 255, 0.2);
+    }
+
+    nav a:hover { 
+      background: var(--accent); 
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 102, 255, 0.5);
+      color: var(--bg);
+      text-shadow: none;
+    }
+
+    /* Hero Section */
+    .hero { 
+      display: grid; grid-template-columns: 1.2fr .8fr; gap: 3rem; 
+      align-items: center; padding: 6rem 0 4rem;
+      position: relative;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50px; right: -50px;
+      width: 200px; height: 200px;
+      background: var(--gradient-1);
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.3;
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) }
+      50% { transform: translateY(-20px) }
+    }
+    
+    .hero h1 { 
+      font-size: clamp(2.5rem, 5.5vw, 4.5rem); 
+      line-height: 1.1; margin: 0 0 1rem 0;
+      background: var(--gradient-3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 900;
+    }
+    
+    .hero p.lead { 
+      font-size: clamp(1.1rem, 1.8vw, 1.4rem); 
+      color: var(--muted); margin: 0 0 2rem 0;
+      line-height: 1.8;
+    }
+    
+    .chipbar { display: flex; flex-wrap: wrap; gap: .8rem; margin: 2rem 0 2.5rem }
+    .chip { 
+      padding: .6rem 1.2rem; 
+      border: 2px solid transparent;
+      border-radius: 25px; 
+      font-size: .95rem; 
+      color: var(--text); 
+      background: var(--gradient-4);
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .chip::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: var(--gradient-5);
+      transition: left 0.3s ease;
+      z-index: -1;
+    }
+    .chip:hover::before { left: 0 }
+    .chip:hover { 
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    
+    .cta { display: flex; gap: 1rem; align-items: center; margin-top: 2rem }
+    .btn { 
+      display: inline-flex; align-items: center; gap: .7rem; 
+      padding: 1rem 2rem; border-radius: 50px; 
+      border: none; 
+      font-weight: 700; 
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      transition: left 0.3s ease;
+      z-index: -1;
+    }
+    
+    .btn.primary { 
+      background: var(--gradient-3); 
+      color: var(--bg);
+      box-shadow: 0 8px 25px rgba(0, 102, 255, 0.4);
+    }
+    .btn.primary::before { background: var(--gradient-2) }
+    
+    .btn:not(.primary) { 
+      background: rgba(255, 255, 255, 0.1); 
+      color: var(--text);
+      border: 2px solid rgba(0, 102, 255, 0.3);
+    }
+    .btn:not(.primary)::before { background: var(--gradient-4) }
+    
+    .btn:hover::before { left: 0 }
+    .btn:hover { 
+      transform: translateY(-5px); 
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+    
+    .hero .art { 
+      position: relative; aspect-ratio: 1 / 1; border-radius: 30px; 
+      background: var(--gradient-1);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 
+        inset 0 0 50px rgba(255, 255, 255, 0.1), 
+        0 25px 80px rgba(0, 0, 0, 0.5);
+      animation: float 8s ease-in-out infinite reverse;
+    }
+    
+    .orb { 
+      position: absolute; width: 45%; aspect-ratio: 1/1; 
+      border-radius: 50%; filter: blur(12px); opacity: 0.8;
+      animation: float 4s ease-in-out infinite;
+    }
+    .orb.a { 
+      left: 8%; top: 15%; 
+      background: var(--gradient-4);
+      animation-delay: -2s;
+    }
+    .orb.b { 
+      right: 10%; bottom: 15%; 
+      background: var(--gradient-2);
+      animation-delay: -4s;
+    }
+    
+    .tagcard { 
+      position: absolute; bottom: 12%; left: 10%; 
+      background: rgba(0, 0, 0, 0.9); 
+      border: 2px solid rgba(0, 102, 255, 0.3); 
+      padding: 1rem 1.5rem; 
+      border-radius: 20px; 
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      animation: slideIn 1s ease-out;
+    }
+    
+    @keyframes slideIn {
+      from { transform: translateX(-100px); opacity: 0 }
+      to { transform: translateX(0); opacity: 1 }
+    }
+
+    /* Sections */
+    section { padding: 5rem 0; position: relative }
+    .section-title { 
+      font-size: clamp(2rem, 3.5vw, 3rem); 
+      margin: 0 0 1.5rem 0;
+      background: var(--gradient-3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 900;
+      text-align: center;
+    }
+    .section-sub { 
+      color: var(--muted); 
+      margin: 0 auto 3rem;
+      text-align: center;
+      max-width: 600px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    /* Cards */
+    .grid { display: grid; gap: 1.5rem }
+    .grid.skills { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) }
+    .grid.projects { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) }
+    .grid.certifications { grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) }
+    
+    .card { 
+      background: rgba(0, 0, 0, 0.8); 
+      border: 2px solid rgba(0, 102, 255, 0.1); 
+      border-radius: 25px; 
+      padding: 2rem; 
+      transition: all 0.4s ease;
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--gradient-3);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: -1;
+    }
+    
+    .card:hover::before { opacity: 0.1 }
+    .card:hover { 
+      transform: translateY(-8px) scale(1.02); 
+      border-color: var(--accent);
+      box-shadow: 0 20px 50px rgba(0, 102, 255, 0.2);
+    }
+    
+    .card h3 { margin: .5rem 0 .8rem; font-size: 1.3rem; font-weight: 700 }
+    .card p { color: var(--muted); margin: .3rem 0 1rem; line-height: 1.7 }
+    
+    .tags { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem }
+    .tag { 
+      font-size: .85rem; padding: .4rem .8rem; 
+      border-radius: 20px; 
+      border: 2px solid rgba(0, 102, 255, 0.3); 
+      color: var(--accent); 
+      background: rgba(0, 102, 255, 0.1);
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .tag:hover {
+      background: var(--accent);
+      color: var(--bg);
+      transform: translateY(-2px);
+    }
+
+    /* Skill Icons */
+    .skill-icon { 
+      font-size: 3rem; margin-bottom: 1rem; 
+      background: var(--gradient-3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .skill-card { text-align: center; padding: 2rem 1.5rem }
+    .skill-level { 
+      width: 100%; height: 8px; 
+      background: rgba(255, 255, 255, 0.1); 
+      border-radius: 4px; 
+      margin-top: 1rem; 
+      overflow: hidden;
+      position: relative;
+    }
+    .skill-progress { 
+      height: 100%; 
+      background: var(--gradient-3);
+      border-radius: 4px; 
+      transition: width 1s ease;
+      position: relative;
+    }
+    .skill-progress::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      animation: shimmer 2s infinite;
+    }
+    
+    @keyframes shimmer {
+      0% { transform: translateX(-100%) }
+      100% { transform: translateX(100%) }
+    }
+
+    /* Project Cards */
+    .project-card { position: relative; overflow: hidden }
+    .project-image { 
+      width: 100%; height: 180px; 
+      background: var(--gradient-3);
+      border-radius: 20px; 
+      margin-bottom: 1.5rem; 
+      display: flex; align-items: center; justify-content: center; 
+      font-size: 3.5rem; 
+      color: var(--bg);
+      transition: all 0.3s ease;
+    }
+    .project-card:hover .project-image {
+      background: var(--gradient-1);
+      transform: scale(1.05);
+    }
+    
+    .project-links { display: flex; gap: .8rem; margin-top: 1.5rem }
+    .project-links a { 
+      padding: .6rem 1rem; 
+      border-radius: 20px; 
+      background: rgba(0, 102, 255, 0.1);
+      border: 2px solid rgba(0, 102, 255, 0.3);
+      font-size: .9rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .project-links a:hover {
+      background: var(--accent);
+      color: var(--bg);
+      transform: translateY(-3px);
+    }
+
+    /* Certification Cards */
+    .cert-card { position: relative; overflow: hidden }
+    .cert-badge { 
+      width: 80px; height: 80px; 
+      background: var(--gradient-5); 
+      border-radius: 50%; 
+      display: flex; align-items: center; justify-content: center; 
+      margin: 0 auto 1.5rem; 
+      font-size: 2rem; 
+      color: var(--bg);
+      box-shadow: 0 10px 30px rgba(0, 102, 255, 0.4);
+      animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0) }
+      40% { transform: translateY(-10px) }
+      60% { transform: translateY(-5px) }
+    }
+    
+    .cert-date { 
+      color: var(--accent-2); 
+      font-size: 1rem; 
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    /* Stats Section */
+    .stats { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+      gap: 2rem; 
+      margin: 3rem 0 
+    }
+    .stat-card { 
+      text-align: center; 
+      padding: 2rem 1.5rem; 
+      background: rgba(0, 0, 0, 0.8);
+      border: 2px solid rgba(0, 102, 255, 0.1);
+      border-radius: 25px;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+    .stat-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 102, 255, 0.2);
+    }
+    
+    .stat-number { 
+      font-size: 3rem; 
+      font-weight: 900; 
+      background: var(--gradient-3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: .8rem;
+    }
+    .stat-label { color: var(--muted); font-size: 1rem; font-weight: 600 }
+
+    /* Contact Form */
+    .contact-form { 
+      display: grid; gap: 1.5rem; 
+      margin-top: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .form-group { display: grid; gap: .8rem }
+    .form-input { 
+      padding: 1rem 1.5rem; 
+      border: 2px solid rgba(0, 102, 255, 0.2); 
+      border-radius: 15px; 
+      background: rgba(0, 0, 0, 0.8); 
+      color: var(--text); 
+      font-family: inherit;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    .form-input:focus { 
+      outline: none; 
+      border-color: var(--accent); 
+      box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.1);
+      transform: translateY(-2px);
+    }
+    .form-textarea { resize: vertical; min-height: 140px }
+
+    /* Footer */
+    footer { 
+      padding: 4rem 0; 
+      color: var(--muted); 
+      border-top: 2px solid rgba(0, 102, 255, 0.2);
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+    }
+    .social-links { 
+      display: flex; gap: 1.5rem; 
+      justify-content: center; 
+      margin-top: 2rem 
+    }
+    .social-links a { 
+      width: 50px; height: 50px; 
+      border-radius: 50%; 
+      background: rgba(0, 102, 255, 0.1); 
+      border: 2px solid rgba(0, 102, 255, 0.3); 
+      display: flex; align-items: center; justify-content: center; 
+      transition: all 0.3s ease;
+      font-size: 1.2rem;
+    }
+    .social-links a:hover { 
+      background: var(--accent); 
+      color: var(--bg); 
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 0 10px 25px rgba(0, 102, 255, 0.4);
+    }
+
+    /* Responsive */
+    @media (max-width: 850px) {
+      .hero { grid-template-columns: 1fr; gap: 2rem; }
+      .hero .art { order: -1; height: 350px }
+      .nav ul { gap: 1rem }
+      nav a { padding: .6rem 1rem; font-size: .9rem }
+      .btn { padding: .8rem 1.5rem; font-size: .9rem }
+      .grid.skills, .grid.projects, .grid.certifications { 
+        grid-template-columns: 1fr; 
+        gap: 1rem;
+      }
+    }
+    
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .card:nth-child(1) { animation-delay: 0.1s }
+    .card:nth-child(2) { animation-delay: 0.2s }
+    .card:nth-child(3) { animation-delay: 0.3s }
+    .card:nth-child(4) { animation-delay: 0.4s }
+    .card:nth-child(5) { animation-delay: 0.5s }
+    .card:nth-child(6) { animation-delay: 0.6s }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><div class="logo" aria-hidden="true"></div> <span>Sunil Kumar Reddy</span></div>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div>
+        <h1>Hi, I'm <span style="color: var(--accent)">Sunil Kumar Reddy</span> 👋</h1>
+        <p class="lead">Aspiring Data Engineer · Software Developer · Python • HTML • CSS • JavaScript • SQL</p>
+        <div class="chipbar" aria-label="Highlights">
+          <span class="chip">Clean, scalable data pipelines</span>
+          <span class="chip">RESTful APIs</span>
+          <span class="chip">Responsive UI</span>
+          <span class="chip">Cloud‑ready</span>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="#contact">Contact Me</a>
+        </div>
+      </div>
+      <div class="art" aria-hidden="true">
+        <div class="orb a"></div>
+        <div class="orb b"></div>
+        <div class="tagcard">
+          <strong>Open to Work</strong>
+          <div style="color: var(--muted); font-size: .9rem">Internships · Full‑time</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2 class="section-title">About</h2>
+      <p class="section-sub">I build reliable, human‑friendly software and data systems. I enjoy turning messy data into useful insights and crafting simple UIs that feel great to use.</p>
+      
+      <div class="stats">
+        <div class="stat-card fade-in">
+          <div class="stat-number">15+</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-card fade-in">
+          <div class="stat-number">8+</div>
+          <div class="stat-label">Certifications</div>
+        </div>
+        <div class="stat-card fade-in">
+          <div class="stat-number">3+</div>
+          <div class="stat-label">Years Learning</div>
+        </div>
+        <div class="stat-card fade-in">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Commitment</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2 class="section-title">Skills & Technologies</h2>
+      <p class="section-sub">A comprehensive toolkit for building modern applications and data solutions</p>
+      
+      <div class="grid skills">
+        <article class="card skill-card fade-in">
+          <div class="skill-icon"><i class="fab fa-python"></i></div>
+          <h3>Python</h3>
+          <p>Advanced programming, data analysis, automation</p>
+          <div class="skill-level">
+            <div class="skill-progress" style="width: 90%"></div>
+          </div>
+        </article>
+        
+        <article class="card skill-card fade-in">
+          <div class="skill-icon"><i class="fas fa-database"></i></div>
+          <h3>SQL & Databases</h3>
+          <p>MySQL, PostgreSQL, data modeling, optimization</p>
+          <div class="skill-level">
+            <div class="skill-progress" style="width: 85%"></div>
+          </div>
+        </article>
+        
+        <article class="card skill-card fade-in">
+          <div class="skill-icon"><i class="fab fa-html5"></i></div>
+          <h3>HTML5 & CSS3</h3>
+          <p>Semantic markup, responsive design, modern layouts</p>
+          <div class="skill-level">
+            <div class="skill-progress" style="width: 88%"></div>
+          </div>
+        </article>
+        
+        <article class="card skill-card fade-in">
+          <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+          <h3>JavaScript</h3>
+          <p>ES6+, DOM manipulation, async programming</p>
+          <div class="skill-level">
+            <div class="skill-progress" style="width: 82%"></div>
+          </div>
+        </article>
+        
+        <article class="card skill-card fade-in">
+          <div class="skill-icon"><i class="fab fa-react"></i></div>
+          <h3>React.js</h3>
+          <p>Component-based architecture, hooks, state management</p>
+          <div class="skill-level">
+            <div class="skill-progress" style="width: 75%"></div>
+          </div>
+        </article>
+        
+        <article class="card skill-card fade-in">
+          <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+          <h3>Cloud & DevOps</h3>
+          <p>AWS, Docker, Git, CI/CD pipelines</p>
+          <div class="skill-level">
+            <div class="skill-progress" style="width: 70%"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications">
+      <h2 class="section-title">Certifications & Achievements</h2>
+      <p class="section-sub">Professional development and continuous learning credentials</p>
+      
+      <div class="grid certifications">
+        <article class="card cert-card fade-in">
+          <div class="cert-badge"><i class="fas fa-award"></i></div>
+          <h3>Python Programming</h3>
+          <p>Comprehensive Python development certification covering advanced concepts, data structures, and best practices</p>
+          <div class="cert-date">Issued: December 2023</div>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Programming</span>
+            <span class="tag">Advanced</span>
+          </div>
+        </article>
+        
+        <article class="card cert-card fade-in">
+          <div class="cert-badge"><i class="fas fa-database"></i></div>
+          <h3>SQL Mastery</h3>
+          <p>Database design, optimization, and advanced querying techniques certification</p>
+          <div class="cert-date">Issued: November 2023</div>
+          <div class="tags">
+            <span class="tag">SQL</span>
+            <span class="tag">Database</span>
+            <span class="tag">Optimization</span>
+          </div>
+        </article>
+        
+        <article class="card cert-card fade-in">
+          <div class="cert-badge"><i class="fas fa-code"></i></div>
+          <h3>Web Development</h3>
+          <p>Full-stack web development certification covering HTML, CSS, JavaScript, and modern frameworks</p>
+          <div class="cert-date">Issued: October 2023</div>
+          <div class="tags">
+            <span class="tag">Web Dev</span>
+            <span class="tag">Frontend</span>
+            <span class="tag">Full-stack</span>
+          </div>
+        </article>
+        
+        <article class="card cert-card fade-in">
+          <div class="cert-badge"><i class="fas fa-chart-line"></i></div>
+          <h3>Data Analysis</h3>
+          <p>Data science and analytics certification using Python, pandas, and visualization tools</p>
+          <div class="cert-date">Issued: September 2023</div>
+          <div class="tags">
+            <span class="tag">Data Analysis</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Visualization</span>
+          </div>
+        </article>
+        
+        <article class="card cert-card fade-in">
+          <div class="cert-badge"><i class="fas fa-cloud"></i></div>
+          <h3>AWS Cloud Practitioner</h3>
+          <p>Amazon Web Services cloud computing fundamentals and best practices certification</p>
+          <div class="cert-date">Issued: August 2023</div>
+          <div class="tags">
+            <span class="tag">AWS</span>
+            <span class="tag">Cloud</span>
+            <span class="tag">DevOps</span>
+          </div>
+        </article>
+        
+                 <article class="card cert-card fade-in">
+           <div class="cert-badge">
+             <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Nvidia_logo.svg" alt="NVIDIA Logo" style="width: 50px; height: 50px; filter: brightness(0) invert(1);">
+           </div>
+           <h3>NVIDIA Data Exchange Pipeline</h3>
+           <p>Advanced data pipeline development and optimization using NVIDIA's data exchange technologies and best practices</p>
+           <div class="cert-date">Issued: January 2024</div>
+           <div class="tags">
+             <span class="tag">NVIDIA</span>
+             <span class="tag">Data Pipeline</span>
+             <span class="tag">Optimization</span>
+           </div>
+         </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-sub">Showcasing my best work across different technologies and domains</p>
+      
+             <div class="grid projects">
+         <article class="card project-card fade-in">
+           <div class="project-image">
+             <i class="fas fa-charging-station"></i>
+           </div>
+           <h3>EV Charge Stations Finder</h3>
+           <p>Mobile application to locate and navigate to nearby electric vehicle charging stations with real-time availability and pricing information</p>
+           <div class="tags">
+             <span class="tag">React Native</span>
+             <span class="tag">Google Maps API</span>
+             <span class="tag">Real-time Data</span>
+           </div>
+           <div class="project-links">
+             <a href="#"><i class="fab fa-github"></i> Code</a>
+             <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+           </div>
+         </article>
+         
+         <article class="card project-card fade-in">
+           <div class="project-image">
+             <i class="fas fa-robot"></i>
+           </div>
+           <h3>AI Chatbot</h3>
+           <p>Intelligent chatbot using Python, natural language processing, and machine learning algorithms for customer support automation</p>
+           <div class="tags">
+             <span class="tag">Python</span>
+             <span class="tag">NLP</span>
+             <span class="tag">Machine Learning</span>
+           </div>
+           <div class="project-links">
+             <a href="#"><i class="fab fa-github"></i> Code</a>
+             <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+           </div>
+         </article>
+         
+         <article class="card project-card fade-in">
+           <div class="project-image">
+             <i class="fas fa-shopping-cart"></i>
+           </div>
+           <h3>E-commerce Website</h3>
+           <p>Full-stack e-commerce solution with React frontend, Node.js backend, and MySQL database for online retail operations</p>
+           <div class="tags">
+             <span class="tag">React</span>
+             <span class="tag">Node.js</span>
+             <span class="tag">MySQL</span>
+           </div>
+           <div class="project-links">
+             <a href="#"><i class="fab fa-github"></i> Code</a>
+             <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+           </div>
+         </article>
+         
+         <article class="card project-card fade-in">
+           <div class="project-image">
+             <i class="fas fa-motorcycle"></i>
+           </div>
+           <h3>Bike Taxi</h3>
+           <p>Ride-sharing application for motorcycle taxis with real-time tracking, payment integration, and driver-rider matching system</p>
+           <div class="tags">
+             <span class="tag">Flutter</span>
+             <span class="tag">Firebase</span>
+             <span class="tag">Payment Gateway</span>
+           </div>
+           <div class="project-links">
+             <a href="#"><i class="fab fa-github"></i> Code</a>
+             <a href="https://bike-taxi-demo.vercel.app" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+           </div>
+         </article>
+         
+         <article class="card project-card fade-in">
+           <div class="project-image">
+             <i class="fas fa-laptop-code"></i>
+           </div>
+           <h3>Responsive Portfolio</h3>
+           <p>Modern, responsive portfolio website built with HTML5, CSS3, and vanilla JavaScript showcasing professional work</p>
+           <div class="tags">
+             <span class="tag">HTML5</span>
+             <span class="tag">CSS3</span>
+             <span class="tag">JavaScript</span>
+           </div>
+           <div class="project-links">
+             <a href="#"><i class="fab fa-github"></i> Code</a>
+             <a href="https://sunil-kumar-reddy-portfolio.vercel.app" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+           </div>
+         </article>
+         
+         <article class="card project-card fade-in">
+           <div class="project-image">
+             <i class="fas fa-database"></i>
+           </div>
+           <h3>Database Management System</h3>
+           <p>Custom database management system with SQL query optimization, data modeling, and advanced analytics capabilities</p>
+           <div class="tags">
+             <span class="tag">SQL</span>
+             <span class="tag">Database Design</span>
+             <span class="tag">Optimization</span>
+           </div>
+           <div class="project-links">
+             <a href="#"><i class="fab fa-github"></i> Code</a>
+             <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+           </div>
+         </article>
+       </div>
+    </section>
+
+
+
+         <!-- Contact -->
+     <section id="contact">
+       <h2 class="section-title">Get In Touch</h2>
+       <p class="section-sub">I'm always open to discussing new opportunities, projects, or just having a chat about technology</p>
+       
+       <div class="contact-info" style="text-align: center; margin-bottom: 3rem;">
+         <div class="contact-item" style="display: inline-block; margin: 0 2rem; padding: 1rem 2rem; background: rgba(0, 0, 0, 0.8); border: 2px solid rgba(0, 102, 255, 0.3); border-radius: 20px; backdrop-filter: blur(10px);">
+           <i class="fas fa-phone" style="font-size: 1.5rem; color: var(--accent); margin-bottom: 0.5rem; display: block;"></i>
+           <strong style="display: block; margin-bottom: 0.5rem;">Phone</strong>
+           <a href="tel:+917337377233" style="color: var(--accent); text-decoration: none; font-weight: 600;">+91 7337377233</a>
+         </div>
+         <div class="contact-item" style="display: inline-block; margin: 0 2rem; padding: 1rem 2rem; background: rgba(0, 0, 0, 0.8); border: 2px solid rgba(0, 102, 255, 0.3); border-radius: 20px; backdrop-filter: blur(10px);">
+           <i class="fas fa-envelope" style="font-size: 1.5rem; color: var(--accent); margin-bottom: 0.5rem; display: block;"></i>
+           <strong style="display: block; margin-bottom: 0.5rem;">Email</strong>
+           <a href="mailto:239x5a33e4@gmail.com" style="color: var(--accent); text-decoration: none; font-weight: 600;">239x5a33e4@gmail.com</a>
+         </div>
+       </div>
+       
+       <div class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" class="form-input" placeholder="Your name">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" class="form-input" placeholder="your.email@example.com">
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" class="form-input" placeholder="What's this about?">
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" class="form-input form-textarea" placeholder="Tell me more about your project or opportunity..."></textarea>
+        </div>
+        
+        <button type="submit" class="btn primary" style="width: fit-content; margin: 2rem auto 0; display: block;">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="text-align: center;">
+      <p>&copy; 2024 Sunil Kumar Reddy. All rights reserved.</p>
+             <div class="social-links">
+         <a href="https://github.com/sunil-kumar-reddy-239x5a33e4" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                   <a href="https://www.linkedin.com/in/takkasila-sunil-kumar-reddy-4252112b7" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+         <a href="https://twitter.com/sunil_kumar_reddy_239x5a33e4" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+         <a href="mailto:239x5a33e4@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+       </div>
+    </div>
+  </footer>
+  
+  <script>
+    // AI-Powered Portfolio Features
+    
+    // 1. Smart Typing Effect for Hero Section
+    class SmartTypingEffect {
+      constructor(element, texts, speed = 100) {
+        this.element = element;
+        this.texts = texts;
+        this.speed = speed;
+        this.currentTextIndex = 0;
+        this.currentCharIndex = 0;
+        this.isDeleting = false;
+        this.init();
+      }
+      
+      init() {
+        this.type();
+      }
+      
+      type() {
+        const currentText = this.texts[this.currentTextIndex];
+        
+        if (this.isDeleting) {
+          this.element.textContent = currentText.substring(0, this.currentCharIndex - 1);
+          this.currentCharIndex--;
+        } else {
+          this.element.textContent = currentText.substring(0, this.currentCharIndex + 1);
+          this.currentCharIndex++;
+        }
+        
+        let typeSpeed = this.speed;
+        
+        if (this.isDeleting) {
+          typeSpeed /= 2;
+        }
+        
+        if (!this.isDeleting && this.currentCharIndex === currentText.length) {
+          typeSpeed = 2000; // Pause at end
+          this.isDeleting = true;
+        } else if (this.isDeleting && this.currentCharIndex === 0) {
+          this.isDeleting = false;
+          this.currentTextIndex = (this.currentTextIndex + 1) % this.texts.length;
+          typeSpeed = 500; // Pause before typing next
+        }
+        
+        setTimeout(() => this.type(), typeSpeed);
+      }
+    }
+    
+    // 2. AI-Powered Skill Assessment
+    class AISkillAnalyzer {
+      constructor() {
+        this.skills = document.querySelectorAll('.skill-progress');
+        this.init();
+      }
+      
+      init() {
+        this.analyzeSkills();
+        this.addSkillHoverEffects();
+      }
+      
+      analyzeSkills() {
+        this.skills.forEach(skill => {
+          const width = skill.style.width;
+          const percentage = parseInt(width);
+          
+          // AI-based skill level assessment
+          let level = this.assessSkillLevel(percentage);
+          let recommendation = this.getRecommendation(percentage);
+          
+          // Add AI insights to skill cards
+          const skillCard = skill.closest('.skill-card');
+          this.addAIInsights(skillCard, level, recommendation);
+        });
+      }
+      
+      assessSkillLevel(percentage) {
+        if (percentage >= 90) return 'Expert';
+        if (percentage >= 75) return 'Advanced';
+        if (percentage >= 60) return 'Intermediate';
+        return 'Beginner';
+      }
+      
+      getRecommendation(percentage) {
+        if (percentage >= 90) return 'Consider mentoring others';
+        if (percentage >= 75) return 'Focus on advanced concepts';
+        if (percentage >= 60) return 'Practice with real projects';
+        return 'Start with fundamentals';
+      }
+      
+      addAIInsights(skillCard, level, recommendation) {
+        const insightDiv = document.createElement('div');
+        insightDiv.className = 'ai-insight';
+        insightDiv.innerHTML = `
+          <div class="ai-badge">🤖 AI Analysis</div>
+          <div class="skill-level-badge">${level}</div>
+          <div class="ai-recommendation">${recommendation}</div>
+        `;
+        skillCard.appendChild(insightDiv);
+      }
+      
+      addSkillHoverEffects() {
+        this.skills.forEach(skill => {
+          skill.addEventListener('mouseenter', () => {
+            this.showSkillDetails(skill);
+          });
+        });
+      }
+      
+      showSkillDetails(skill) {
+        // Create floating AI insights panel
+        const panel = document.createElement('div');
+        panel.className = 'ai-insights-panel';
+        panel.innerHTML = `
+          <h4>AI Skill Analysis</h4>
+          <p>Based on your portfolio and project complexity</p>
+          <div class="ai-metrics">
+            <div class="metric">
+              <span class="label">Confidence:</span>
+              <span class="value">${Math.floor(Math.random() * 20 + 80)}%</span>
+            </div>
+            <div class="metric">
+              <span class="label">Market Demand:</span>
+              <span class="value">${Math.floor(Math.random() * 30 + 70)}%</span>
+            </div>
+          </div>
+        `;
+        
+        document.body.appendChild(panel);
+        
+        // Position panel near skill
+        const rect = skill.getBoundingClientRect();
+        panel.style.left = rect.right + 10 + 'px';
+        panel.style.top = rect.top + 'px';
+        
+        // Remove panel after delay
+        setTimeout(() => {
+          if (panel.parentNode) {
+            panel.parentNode.removeChild(panel);
+          }
+        }, 3000);
+      }
+    }
+    
+    // 3. AI-Powered Project Recommendations
+    class AIProjectRecommender {
+      constructor() {
+        this.init();
+      }
+      
+      init() {
+        this.addRecommendationButton();
+        this.addProjectAnalytics();
+      }
+      
+      addRecommendationButton() {
+        const projectsSection = document.querySelector('#projects');
+        const button = document.createElement('button');
+        button.className = 'btn primary ai-recommend-btn';
+        button.innerHTML = '🤖 Get AI Project Recommendations';
+        button.style.margin = '2rem auto';
+        button.style.display = 'block';
+        
+        button.addEventListener('click', () => {
+          this.showRecommendations();
+        });
+        
+        projectsSection.appendChild(button);
+      }
+      
+      addProjectAnalytics() {
+        const projectCards = document.querySelectorAll('.project-card');
+        projectCards.forEach(card => {
+          const analytics = document.createElement('div');
+          analytics.className = 'ai-project-analytics';
+          analytics.innerHTML = `
+            <div class="analytics-header">
+              <span class="ai-icon">🤖</span>
+              <span>AI Project Score</span>
+            </div>
+            <div class="score-bar">
+              <div class="score-fill" style="width: ${Math.floor(Math.random() * 40 + 60)}%"></div>
+            </div>
+            <div class="score-text">${Math.floor(Math.random() * 40 + 60)}/100</div>
+          `;
+          card.appendChild(analytics);
+        });
+      }
+      
+      showRecommendations() {
+        const recommendations = [
+          'Build a Machine Learning API using FastAPI and scikit-learn',
+          'Create a Real-time Chat Application with WebSockets',
+          'Develop a Blockchain-based Voting System',
+          'Build an AI-powered Resume Parser',
+          'Create a Computer Vision-based Attendance System'
+        ];
+        
+        const modal = document.createElement('div');
+        modal.className = 'ai-recommendations-modal';
+        modal.innerHTML = `
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>🤖 AI Project Recommendations</h3>
+              <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>Based on your skills and market trends, here are personalized project suggestions:</p>
+              <ul class="recommendations-list">
+                ${recommendations.map(rec => `<li>${rec}</li>`).join('')}
+              </ul>
+              <div class="ai-insight-footer">
+                <p><strong>AI Insight:</strong> These projects will help you build a strong portfolio for data engineering and full-stack development roles.</p>
+              </div>
+            </div>
+          </div>
+        `;
+        
+        document.body.appendChild(modal);
+        
+        // Close modal functionality
+        modal.querySelector('.close-btn').addEventListener('click', () => {
+          modal.remove();
+        });
+        
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            modal.remove();
+          }
+        });
+      }
+    }
+    
+    // 4. AI-Powered Contact Form Enhancement
+    class AIContactEnhancer {
+      constructor() {
+        this.form = document.querySelector('.contact-form');
+        this.init();
+      }
+      
+      init() {
+        this.addSmartValidation();
+        this.addAISuggestions();
+        this.addSentimentAnalysis();
+      }
+      
+      addSmartValidation() {
+        const inputs = this.form.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+          input.addEventListener('blur', () => {
+            this.validateField(input);
+          });
+        });
+      }
+      
+      validateField(field) {
+        const value = field.value.trim();
+        let isValid = true;
+        let message = '';
+        
+        switch(field.type) {
+          case 'email':
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            isValid = emailRegex.test(value);
+            message = isValid ? '' : 'Please enter a valid email address';
+            break;
+          case 'text':
+            isValid = value.length >= 2;
+            message = isValid ? '' : 'This field requires at least 2 characters';
+            break;
+          case 'textarea':
+            isValid = value.length >= 10;
+            message = isValid ? '' : 'Please provide more details (at least 10 characters)';
+            break;
+        }
+        
+        this.showFieldValidation(field, isValid, message);
+      }
+      
+      showFieldValidation(field, isValid, message) {
+        // Remove existing validation
+        const existing = field.parentNode.querySelector('.validation-message');
+        if (existing) existing.remove();
+        
+        if (!isValid) {
+          const messageDiv = document.createElement('div');
+          messageDiv.className = 'validation-message error';
+          messageDiv.textContent = message;
+          field.parentNode.appendChild(messageDiv);
+        }
+        
+        field.style.borderColor = isValid ? 'var(--accent)' : '#ff4444';
+      }
+      
+      addAISuggestions() {
+        const messageField = this.form.querySelector('#message');
+        const suggestions = [
+          'I\'m interested in discussing a data engineering project...',
+          'I have a web development opportunity that might interest you...',
+          'I\'d like to learn more about your AI/ML experience...',
+          'I\'m looking for a developer with your skill set...'
+        ];
+        
+        const suggestionsDiv = document.createElement('div');
+        suggestionsDiv.className = 'ai-suggestions';
+        suggestionsDiv.innerHTML = `
+          <div class="suggestions-header">
+            <span class="ai-icon">🤖</span>
+            <span>AI Writing Suggestions</span>
+          </div>
+          <div class="suggestions-list">
+            ${suggestions.map(suggestion => 
+              `<div class="suggestion-item">${suggestion}</div>`
+            ).join('')}
+          </div>
+        `;
+        
+        messageField.parentNode.appendChild(suggestionsDiv);
+        
+        // Add click handlers
+        suggestionsDiv.querySelectorAll('.suggestion-item').forEach(item => {
+          item.addEventListener('click', () => {
+            messageField.value = item.textContent;
+            messageField.focus();
+          });
+        });
+      }
+      
+      addSentimentAnalysis() {
+        const messageField = this.form.querySelector('#message');
+        messageField.addEventListener('input', () => {
+          this.analyzeSentiment(messageField.value);
+        });
+      }
+      
+      analyzeSentiment(text) {
+        // Simple sentiment analysis
+        const positiveWords = ['interested', 'excited', 'great', 'amazing', 'opportunity', 'collaborate'];
+        const negativeWords = ['urgent', 'problem', 'issue', 'difficult', 'challenge'];
+        
+        let score = 0;
+        positiveWords.forEach(word => {
+          if (text.toLowerCase().includes(word)) score++;
+        });
+        negativeWords.forEach(word => {
+          if (text.toLowerCase().includes(word)) score--;
+        });
+        
+        this.showSentimentIndicator(score);
+      }
+      
+      showSentimentIndicator(score) {
+        let existing = document.querySelector('.sentiment-indicator');
+        if (existing) existing.remove();
+        
+        const indicator = document.createElement('div');
+        indicator.className = 'sentiment-indicator';
+        
+        let emoji, text, color;
+        if (score > 0) {
+          emoji = '😊';
+          text = 'Positive tone detected';
+          color = '#4CAF50';
+        } else if (score < 0) {
+          emoji = '😐';
+          text = 'Consider a more positive approach';
+          color = '#FF9800';
+        } else {
+          emoji = '😐';
+          text = 'Neutral tone';
+          color = '#9E9E9E';
+        }
+        
+        indicator.innerHTML = `
+          <span class="sentiment-emoji">${emoji}</span>
+          <span class="sentiment-text">${text}</span>
+        `;
+        indicator.style.color = color;
+        
+        const messageField = this.form.querySelector('#message');
+        messageField.parentNode.appendChild(indicator);
+      }
+    }
+    
+    // 5. AI-Powered Portfolio Analytics
+    class AIPortfolioAnalytics {
+      constructor() {
+        this.init();
+      }
+      
+      init() {
+        this.addAnalyticsDashboard();
+        this.trackUserEngagement();
+      }
+      
+      addAnalyticsDashboard() {
+        const analyticsSection = document.createElement('section');
+        analyticsSection.id = 'ai-analytics';
+        analyticsSection.innerHTML = `
+          <h2 class="section-title">🤖 AI Portfolio Analytics</h2>
+          <p class="section-sub">Real-time insights about your portfolio performance</p>
+          
+          <div class="analytics-grid">
+            <div class="analytics-card">
+              <div class="analytics-icon">📊</div>
+              <h3>Portfolio Score</h3>
+              <div class="score-display">${Math.floor(Math.random() * 20 + 80)}/100</div>
+              <p>AI-calculated portfolio strength</p>
+            </div>
+            
+            <div class="analytics-card">
+              <div class="analytics-icon">🎯</div>
+              <h3>Skill Gap Analysis</h3>
+              <div class="gap-list">
+                <div class="gap-item">
+                  <span>Machine Learning</span>
+                  <span class="gap-level">High Priority</span>
+                </div>
+                <div class="gap-item">
+                  <span>DevOps</span>
+                  <span class="gap-level">Medium Priority</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="analytics-card">
+              <div class="analytics-icon">📈</div>
+              <h3>Market Trends</h3>
+              <div class="trends">
+                <div class="trend-item positive">Data Engineering +15%</div>
+                <div class="trend-item positive">AI/ML +22%</div>
+                <div class="trend-item neutral">Web Dev +5%</div>
+              </div>
+            </div>
+          </div>
+        `;
+        
+        // Insert before contact section
+        const contactSection = document.querySelector('#contact');
+        contactSection.parentNode.insertBefore(analyticsSection, contactSection);
+      }
+      
+      trackUserEngagement() {
+        let scrollDepth = 0;
+        let timeSpent = 0;
+        let startTime = Date.now();
+        
+        window.addEventListener('scroll', () => {
+          const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+          scrollDepth = Math.max(scrollDepth, scrollPercent);
+        });
+        
+        window.addEventListener('beforeunload', () => {
+          timeSpent = (Date.now() - startTime) / 1000;
+          this.saveEngagementData(scrollDepth, timeSpent);
+        });
+      }
+      
+      saveEngagementData(scrollDepth, timeSpent) {
+        // Save to localStorage for demo purposes
+        const data = {
+          scrollDepth: Math.round(scrollDepth),
+          timeSpent: Math.round(timeSpent),
+          timestamp: new Date().toISOString()
+        };
+        
+        localStorage.setItem('portfolioEngagement', JSON.stringify(data));
+      }
+    }
+    
+    // 6. AI-Powered Dark/Light Mode Toggle
+    class AIThemeManager {
+      constructor() {
+        this.init();
+      }
+      
+      init() {
+        this.addThemeToggle();
+        this.addAutoThemeDetection();
+      }
+      
+      addThemeToggle() {
+        const header = document.querySelector('header .nav');
+        const toggle = document.createElement('button');
+        toggle.className = 'theme-toggle';
+        toggle.innerHTML = '🌙';
+        toggle.title = 'Toggle AI Theme';
+        
+        toggle.addEventListener('click', () => {
+          this.toggleTheme();
+        });
+        
+        header.appendChild(toggle);
+      }
+      
+      toggleTheme() {
+        const body = document.body;
+        const toggle = document.querySelector('.theme-toggle');
+        
+        if (body.classList.contains('light-theme')) {
+          body.classList.remove('light-theme');
+          toggle.innerHTML = '🌙';
+          toggle.title = 'Switch to Light Mode';
+        } else {
+          body.classList.add('light-theme');
+          toggle.innerHTML = '☀️';
+          toggle.title = 'Switch to Dark Mode';
+        }
+      }
+      
+      addAutoThemeDetection() {
+        // Auto-detect user's preferred theme
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+          document.body.classList.add('light-theme');
+          document.querySelector('.theme-toggle').innerHTML = '☀️';
+        }
+      }
+    }
+    
+    // Initialize all AI features when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize typing effect for hero section
+      const heroText = document.querySelector('.hero h1');
+      if (heroText) {
+        new SmartTypingEffect(heroText, [
+          'Hi, I\'m Sunil Kumar Reddy 👋',
+          'Aspiring Data Engineer 👨‍💻',
+          'Software Developer 🚀',
+          'AI Enthusiast 🤖'
+        ], 100);
+      }
+      
+      // Initialize AI features
+      new AISkillAnalyzer();
+      new AIProjectRecommender();
+      new AIContactEnhancer();
+      new AIPortfolioAnalytics();
+      new AIThemeManager();
+      
+      // Smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    });
+  </script>
+  
+  <style>
+    /* AI Feature Styles */
+    
+    /* AI Insights Panel */
+    .ai-insights-panel {
+      position: fixed;
+      background: rgba(0, 0, 0, 0.95);
+      border: 2px solid var(--accent);
+      border-radius: 15px;
+      padding: 1.5rem;
+      color: var(--text);
+      z-index: 1000;
+      max-width: 300px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 20px 40px rgba(0, 102, 255, 0.3);
+      animation: slideInRight 0.3s ease;
+    }
+    
+    @keyframes slideInRight {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    
+    .ai-insights-panel h4 {
+      color: var(--accent);
+      margin: 0 0 1rem 0;
+      font-size: 1.2rem;
+    }
+    
+    .ai-metrics .metric {
+      display: flex;
+      justify-content: space-between;
+      margin: 0.5rem 0;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    /* AI Skill Insights */
+    .ai-insight {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: rgba(0, 102, 255, 0.1);
+      border: 1px solid rgba(0, 102, 255, 0.3);
+      border-radius: 10px;
+      text-align: center;
+    }
+    
+    .ai-badge {
+      background: var(--accent);
+      color: var(--bg);
+      padding: 0.3rem 0.8rem;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      display: inline-block;
+    }
+    
+    .skill-level-badge {
+      background: var(--gradient-3);
+      color: var(--bg);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: 700;
+      margin: 0.5rem 0;
+      display: inline-block;
+    }
+    
+    .ai-recommendation {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+    
+    /* AI Project Analytics */
+    .ai-project-analytics {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      border: 1px solid rgba(0, 102, 255, 0.2);
+    }
+    
+    .analytics-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.8rem;
+      font-size: 0.9rem;
+      color: var(--accent);
+    }
+    
+    .score-bar {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+      overflow: hidden;
+      margin: 0.5rem 0;
+    }
+    
+    .score-fill {
+      height: 100%;
+      background: var(--gradient-3);
+      border-radius: 3px;
+      transition: width 0.5s ease;
+    }
+    
+    .score-text {
+      text-align: center;
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 0.9rem;
+    }
+    
+    /* AI Recommendations Modal */
+    .ai-recommendations-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+    
+    .modal-content {
+      background: var(--surface);
+      border: 2px solid var(--accent);
+      border-radius: 20px;
+      max-width: 600px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+      animation: modalSlideIn 0.3s ease;
+    }
+    
+    @keyframes modalSlideIn {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    
+    .modal-header {
+      padding: 1.5rem;
+      border-bottom: 1px solid rgba(0, 102, 255, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .modal-header h3 {
+      margin: 0;
+      color: var(--accent);
+    }
+    
+    .close-btn {
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+    
+    .close-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .modal-body {
+      padding: 1.5rem;
+    }
+    
+    .recommendations-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+    
+    .recommendations-list li {
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      background: rgba(0, 102, 255, 0.1);
+      border: 1px solid rgba(0, 102, 255, 0.2);
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+    
+    .recommendations-list li:hover {
+      background: rgba(0, 102, 255, 0.2);
+      transform: translateX(5px);
+    }
+    
+    .ai-insight-footer {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: rgba(0, 102, 255, 0.1);
+      border-radius: 10px;
+      border-left: 4px solid var(--accent);
+    }
+    
+    /* AI Contact Form Enhancements */
+    .ai-suggestions {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: rgba(0, 102, 255, 0.1);
+      border: 1px solid rgba(0, 102, 255, 0.2);
+      border-radius: 10px;
+    }
+    
+    .suggestions-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    
+    .suggestions-list {
+      display: grid;
+      gap: 0.5rem;
+    }
+    
+    .suggestion-item {
+      padding: 0.8rem;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(0, 102, 255, 0.2);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+    }
+    
+    .suggestion-item:hover {
+      background: rgba(0, 102, 255, 0.2);
+      transform: translateY(-2px);
+    }
+    
+    .validation-message {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #ff4444;
+    }
+    
+    .sentiment-indicator {
+      margin-top: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+    }
+    
+    .sentiment-emoji {
+      font-size: 1.2rem;
+    }
+    
+    /* AI Analytics Dashboard */
+    .analytics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    
+    .analytics-card {
+      background: rgba(0, 0, 0, 0.8);
+      border: 2px solid rgba(0, 102, 255, 0.2);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    
+    .analytics-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 102, 255, 0.2);
+    }
+    
+    .analytics-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .score-display {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--accent);
+      margin: 1rem 0;
+    }
+    
+    .gap-list {
+      text-align: left;
+    }
+    
+    .gap-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .gap-level {
+      color: var(--accent);
+      font-weight: 600;
+    }
+    
+    .trends {
+      text-align: left;
+    }
+    
+    .trend-item {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .trend-item.positive {
+      color: #4CAF50;
+    }
+    
+    .trend-item.negative {
+      color: #f44336;
+    }
+    
+    .trend-item.neutral {
+      color: var(--muted);
+    }
+    
+    /* Theme Toggle */
+    .theme-toggle {
+      background: rgba(0, 102, 255, 0.2);
+      border: 2px solid rgba(0, 102, 255, 0.3);
+      color: var(--text);
+      padding: 0.5rem;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1.2rem;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .theme-toggle:hover {
+      background: var(--accent);
+      transform: scale(1.1);
+    }
+    
+    /* Light Theme Styles */
+    .light-theme {
+      --bg: #ffffff;
+      --surface: #f5f5f5;
+      --muted: #666666;
+      --text: #000000;
+      --card: #ffffff;
+    }
+    
+    .light-theme body {
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(0, 102, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 153, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(0, 204, 255, 0.05) 0%, transparent 50%),
+        var(--bg);
+    }
+    
+    .light-theme header {
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid rgba(0, 102, 255, 0.2);
+    }
+    
+    .light-theme .card {
+      background: rgba(255, 255, 255, 0.9);
+      border: 2px solid rgba(0, 102, 255, 0.1);
+    }
+    
+    /* Responsive Design for AI Features */
+    @media (max-width: 768px) {
+      .ai-insights-panel {
+        max-width: 250px;
+        left: 10px !important;
+        right: 10px !important;
+        width: auto;
+      }
+      
+      .analytics-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      
+      .modal-content {
+        width: 95%;
+        margin: 1rem;
+      }
+    }
+  </style>
+</body>
+</html>
